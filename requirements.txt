@@ -3,3 +3,4 @@ selenium>2.5
 pytest
 nose
 pytest-xdist
+Appium-Python-Client
