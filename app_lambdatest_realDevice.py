@@ -11,7 +11,7 @@ class FirstRealDeviceAPPAutomation(unittest.Testcase):
     def setup(self):
         desired_caps = {
             "platformName":"ios",
-            "deviceName":iPhone "X",
+            "deviceName":"iPhone X",
             "platformVersion":"14",
             "isRealMobile":"TRUE",
             "network":"TRUE",
