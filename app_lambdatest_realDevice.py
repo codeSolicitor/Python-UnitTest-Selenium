@@ -1,4 +1,5 @@
 from appium import webdriver
+from appium.webdriver.common.mobileby import MobileBy
 import os
 import unittest
 import sys
@@ -6,9 +7,9 @@ import sys
 username = os.environ.get("LT_USERNAME")
 password = os.environ.get("LT_ACCESS_KEY")
 
-class FirstRealDeviceAPPAutomation(unittest.Testcase):
+class FirstRealDeviceAppAutomation(unittest.TestCase):
 
-    def setup(self):
+    def setUp(self):
         desired_caps = {
             "platformName":"ios",
             "deviceName":"iPhone X",
@@ -19,7 +20,7 @@ class FirstRealDeviceAPPAutomation(unittest.Testcase):
             "crashlog":"TRUE",
             "devicelog":"TRUE",
             "video":"TRUE",
-            "app":"lt://"
+            "app":"lt://APP10016241638715538137988"
         }
         self.driver = webdriver.Remote("https://{}:{}@beta-hub.lambdatest.com:80/wd/hub".format(username,password),
             desired_capabilities=desired_caps)
