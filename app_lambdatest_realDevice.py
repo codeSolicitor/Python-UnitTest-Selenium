@@ -22,7 +22,7 @@ class FirstRealDeviceAppAutomation(unittest.TestCase):
             "video":"TRUE",
             "app":"lt://APP10016241638715538137988"
         }
-        self.driver = webdriver.Remote("https://{}:{}@beta-hub.lambdatest.com:80/wd/hub".format(username,password),
+        self.driver = webdriver.Remote("https://{}:{}@beta-hub.lambdatest.com/wd/hub".format(username,password),
             desired_capabilities=desired_caps)
 
     def tearDown(self):
